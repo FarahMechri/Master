@@ -1,0 +1,52 @@
+
+
+ sudo apt update 
+ sudo apt install plink
+ plink --version
+ sudo apt install plink
+ sudo apt install putty-tools
+ 
+ 
+ cd ~/Téléchargements
+ wget https://s3.amazonaws.com/plink1-assets/plink_linux_x86_64_20201019.zip
+ unzip plink_linux_x86_64_20201019.zip
+ chmod +x plink
+ plink --version
+ ~/Téléchargements/plink --version
+ which plink
+ dpkg -S $(which plink)
+ sudo apt remove plink
+ ~/Téléchargements/plink --version
+ cd ..
+ cd ~/Bureau/data/data/Henn2012/NAfrica_Bas
+ plink1 --bfile NAfrica_Bas --recode vcf --out monjeu
+ cd ..
+ cd /home/farah/Téléchargements/data/Henn2012/NAfrica_Bas
+ ~/Téléchargements/plink --bfile NAfrica_Bas --recode vcf --out NAfrica_Bas
+ cd ..
+ cd Comas_2017
+ plink --bfile northafrica_syria_filtered --recode vcf --out northafrica_syria_filtered 
+ ~/Téléchargements/plink --bfile northafrica_syria_filtered --recode vcf --out northafrica_syria_filtered
+ cd Anagnostu_2020
+ ~/Téléchargements/plink --bfile Tunisia_dataset --recode vcf --out Tunisia_dataset
+ less Tunisia_dataset.vcf
+ sudo apt install bcftools
+ sudo apt install vcftools
+ cd /home/farah/Téléchargements/data/Comas_2017/northafrica_syria_filtered.vcf
+ cd /home/farah/Téléchargements/data/Comas_2017
+ less northafrica_syria_filtered.vcf
+ cd ..
+ cd Henn2012/NAfrica_Bas
+ less NAfrica_Bas.vcf
+ ~/Téléchargements/plink --bfile NAfrica_Bas --recode vcf --out NAfrica_Bas
+ cd ..
+ cd..
+ sudo apt install git
+ cd ..
+ cd /home/farah/Téléchargements/data
+ git init
+ git add
+ git remote add origin https://github.com/FarahMechri/Master
+ git push -u origin master
+ git push -u origin main
+ history > commandes_terminal.txt
